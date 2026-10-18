@@ -1,6 +1,6 @@
 import './AssignmentCard.css'
 
-function AssignmentCard({ number, title, description, technology, href, onComingSoon }) {
+function AssignmentCard({ number, title, description, technology, href, onOpen, onComingSoon }) {
   return (
     <article className="assignment-card">
       <div className="assignment-card__topline">
@@ -10,7 +10,7 @@ function AssignmentCard({ number, title, description, technology, href, onComing
       <h3>{title}</h3>
       <p>{description}</p>
       {href ? (
-        <a className="assignment-card__action" href={href}>
+        <a className="assignment-card__action" href={href} onClick={onOpen}>
           Open assignment <span aria-hidden="true">↗</span>
         </a>
       ) : (

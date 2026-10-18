@@ -61,7 +61,12 @@ function App() {
           </div>
           <div className="assignment-grid">
             {assignments.map((assignment) => (
-              <AssignmentCard key={assignment.number} {...assignment} onComingSoon={(title) => setNotice(`${title} is coming soon.`)} />
+              <AssignmentCard
+                key={assignment.number}
+                {...assignment}
+                onOpen={assignment.number === 4 ? () => setCurrentHash('#assignment-4-profile-cards') : undefined}
+                onComingSoon={(title) => setNotice(`${title} is coming soon.`)}
+              />
             ))}
           </div>
           <p className="coming-soon" role="status" aria-live="polite">{notice}</p>

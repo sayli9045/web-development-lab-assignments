@@ -1,8 +1,10 @@
-.profile-card { display: flex; min-width: 0; flex-direction: column; padding: 1.5rem; border: 1px solid #e2e6ef; border-radius: 14px; background: #fff; box-shadow: 0 8px 24px rgb(31 48 83 / 5%); }
-.profile-card__avatar { display: grid; width: 54px; height: 54px; place-items: center; margin-bottom: 1rem; border-radius: 16px; background: #e8f0fd; color: #244f88; font-size: 1.35rem; font-weight: 800; }
-.profile-card__name { margin: 0; color: #18243b; font-size: 1.25rem; }
-.profile-card__role { margin: .25rem 0 .85rem; color: #315ca8; font-size: .9rem; font-weight: 700; }
-.profile-card__bio { margin: 0 0 1.25rem; color: #5e6b80; font-size: .94rem; }
-.profile-card__skills-title { margin: auto 0 .55rem; color: #283750; font-size: .85rem; }
-.profile-card__skills { display: flex; flex-wrap: wrap; gap: .45rem; margin: 0; padding: 0; list-style: none; }
-.profile-card__skills li { padding: .3rem .55rem; border-radius: 999px; background: #edf3ff; color: #315ca8; font-size: .75rem; font-weight: 650; }
+.profile-card { display: flex; width: min(100%, 470px); flex-direction: column; align-items: center; padding: clamp(1.5rem, 6vw, 2.75rem); border: 1px solid rgb(161 142 255 / 24%); border-radius: 24px; background: linear-gradient(155deg, #111c35, #0d172e); box-shadow: 0 24px 70px rgb(0 0 0 / 32%), 0 0 40px rgb(130 77 255 / 10%); text-align: center; }
+.profile-card__portrait { display: grid; width: 154px; height: 154px; place-items: center; overflow: hidden; margin-bottom: 1.45rem; border: 4px solid #a855f7; border-radius: 50%; background: #202a44; box-shadow: 0 0 0 6px rgb(168 85 247 / 12%); }
+.profile-card__image { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center 38%; }
+.profile-card__fallback { display: grid; width: 100%; height: 100%; place-items: center; color: #fff; font-size: 2.6rem; font-weight: 750; letter-spacing: .04em; }
+.profile-card__name { margin: 0; color: #f5f7ff; font-size: clamp(1.8rem, 5vw, 2.25rem); letter-spacing: -.035em; line-height: 1.15; }
+.profile-card__role { margin: .45rem 0 1.1rem; color: #51d9f4; font-size: 1rem; font-weight: 700; }
+.profile-card__bio { max-width: 360px; margin: 0 0 1.5rem; color: #c4cce0; font-size: .96rem; line-height: 1.65; }
+.profile-card__skills-title { margin: 0 0 .7rem; color: #eef1fa; font-size: .83rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.profile-card__skills { display: flex; justify-content: center; flex-wrap: wrap; gap: .55rem; margin: 0; padding: 0; list-style: none; }
+.profile-card__skills li { padding: .45rem .8rem; border: 1px solid rgb(136 111 255 / 35%); border-radius: 999px; background: rgb(102 72 190 / 20%); color: #e3d7ff; font-size: .82rem; font-weight: 650; }
