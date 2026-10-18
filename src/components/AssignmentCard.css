@@ -5,6 +5,6 @@
 .assignment-card__technology { padding: .28rem .55rem; border-radius: 999px; background: #edf3ff; color: #315ca8; font-size: .72rem; font-weight: 650; }
 .assignment-card h3 { margin: 0 0 .55rem; color: #18243b; font-size: 1.12rem; line-height: 1.35; }
 .assignment-card p { margin: 0 0 1.25rem; color: #5e6b80; font-size: .94rem; }
-.assignment-card__action { display: inline-flex; width: fit-content; align-items: center; gap: .45rem; margin-top: auto; padding: 0; border: 0; background: transparent; color: #2457aa; cursor: pointer; font: inherit; font-size: .9rem; font-weight: 700; }
+.assignment-card__action { display: inline-flex; width: fit-content; align-items: center; gap: .45rem; margin-top: auto; padding: 0; border: 0; background: transparent; color: #2457aa; cursor: pointer; font: inherit; font-size: .9rem; font-weight: 700; text-decoration: none; }
 .assignment-card__action:hover { color: #173b78; text-decoration: underline; }
 .assignment-card__action:focus-visible { border-radius: 3px; outline: 3px solid #8db5ff; outline-offset: 4px; }

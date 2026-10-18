@@ -1,6 +1,6 @@
 import './AssignmentCard.css'
 
-function AssignmentCard({ number, title, description, technology, onComingSoon }) {
+function AssignmentCard({ number, title, description, technology, href, onComingSoon }) {
   return (
     <article className="assignment-card">
       <div className="assignment-card__topline">
@@ -9,9 +9,15 @@ function AssignmentCard({ number, title, description, technology, onComingSoon }
       </div>
       <h3>{title}</h3>
       <p>{description}</p>
-      <button className="assignment-card__action" type="button" onClick={() => onComingSoon(title)}>
-        Open assignment <span aria-hidden="true">↗</span>
-      </button>
+      {href ? (
+        <a className="assignment-card__action" href={href}>
+          Open assignment <span aria-hidden="true">↗</span>
+        </a>
+      ) : (
+        <button className="assignment-card__action" type="button" onClick={() => onComingSoon(title)}>
+          Open assignment <span aria-hidden="true">↗</span>
+        </button>
+      )}
     </article>
   )
 }

@@ -1,0 +1,42 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1c2940;
+  background: #f3f6fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+body { min-width: 320px; min-height: 100vh; margin: 0; }
+button, input, select { font: inherit; }
+
+.calculator-page {
+  width: min(100% - 2rem, 700px);
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+
+.back-link { display: inline-block; margin-bottom: 1.25rem; color: #2457aa; font-weight: 700; text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
+.back-link:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #8db5ff; outline-offset: 3px; }
+
+.calculator-card { padding: clamp(1.25rem, 5vw, 2.5rem); border: 1px solid #e2e6ef; border-radius: 18px; background: #fff; box-shadow: 0 14px 40px rgb(31 48 83 / 8%); }
+.eyebrow { margin: 0 0 .55rem; color: #315ca8; font-size: .75rem; font-weight: 800; letter-spacing: .14em; }
+h1 { margin: 0; color: #18243b; font-size: clamp(1.8rem, 6vw, 2.5rem); letter-spacing: -.04em; line-height: 1.15; }
+.intro { margin: .75rem 0 1.8rem; color: #5e6b80; }
+
+#calculator-form { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+.field-group { display: flex; min-width: 0; flex-direction: column; gap: .45rem; }
+label { color: #283750; font-size: .9rem; font-weight: 700; }
+input, select { width: 100%; min-height: 48px; padding: .65rem .75rem; border: 1px solid #cbd4e2; border-radius: 8px; background: #fff; color: #18243b; }
+input:hover, select:hover { border-color: #8299bb; }
+.calculate-button { min-height: 48px; align-self: end; padding: .65rem 1rem; border: 0; border-radius: 8px; background: #244f88; color: #fff; cursor: pointer; font-weight: 750; }
+.calculate-button:hover { background: #183d70; }
+.result { min-height: 3.5rem; margin: 1.4rem 0 0; padding: 1rem; border-radius: 9px; background: #edf3ff; color: #213e70; font-size: 1.05rem; font-weight: 700; overflow-wrap: anywhere; }
+.result.is-error { background: #fff0ef; color: #9b2922; }
+
+@media (max-width: 520px) {
+  .calculator-page { width: min(100% - 1.25rem, 440px); padding-top: 1.25rem; }
+  #calculator-form { grid-template-columns: 1fr; }
+}
