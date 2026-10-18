@@ -1,50 +1,63 @@
 # Web Development Lab Assignments
 
-A beginner-friendly collection of six web development lab assignments built with HTML, CSS, JavaScript, React, and Vite.
+A beginner-friendly React and Vite home page for six web development labs. Each assignment is listed with its main technology and a short description. Assignment actions currently display a “Coming soon” message; the assignment activities will be added in a later step.
 
-## Assignments
+## Project structure
 
-1. **JavaScript Calculator** — Basic arithmetic using functions and switch statements.
-2. **DOM To-Do List** — Add, complete, and delete tasks using DOM methods.
-3. **Registration Form Validation** — Validate name, email, phone, and password using JavaScript.
-4. **React Profile Card** — Display profile information using reusable components and props.
-5. **Controlled React Form** — Manage form inputs using React state and display entered data in real time.
-6. **React Counter App** — Increment, decrement, and reset a counter using the useState hook.
+```text
+.
+├── public/                  # Static files served as-is by Vite
+├── src/
+│   ├── components/
+│   │   ├── AssignmentCard.jsx
+│   │   └── AssignmentCard.css
+│   ├── App.jsx               # Assignment data and landing page layout
+│   ├── App.css               # Page layout and responsive styles
+│   ├── index.css             # Global styles
+│   └── main.jsx              # React application entry point
+├── index.html
+├── vite.config.js            # GitHub Pages repository base path
+└── package.json
+```
 
-## Technologies
+## Requirements
 
-- HTML5
-- CSS3
-- JavaScript
-- React
-- Vite
-- Git and GitHub
+- Node.js (current LTS recommended)
+- npm
 
-## Run Locally
-
-Ensure Node.js and npm are installed.
+## Install and run
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open the local URL printed in the terminal.
+Open the local URL printed by Vite in your browser.
 
-## Build and Check
+## Build and lint
 
 ```bash
 npm run build
 npm run lint
+```
+
+To preview a production build locally:
+
+```bash
 npm run preview
 ```
 
-## Deployment
+## GitHub Pages
 
-The project will be published using GitHub Pages after the Vite base path and deployment workflow have been configured for the repository.
+Vite is configured with the repository base path `/web-development-lab-assignments/`, and production asset URLs are generated with that prefix. This repository currently has no GitHub Pages workflow, so deployment is not automated or confirmed. After enabling GitHub Pages for the repository, publish the generated `dist/` directory. The expected site URL is:
 
-Repository: https://github.com/sayli9045/web-development-lab-assignments
+<https://sayli9045.github.io/web-development-lab-assignments/>
 
-## Learning Objective
+## Assignment plan
 
-To understand JavaScript fundamentals, DOM manipulation, form validation, React props, controlled components, and React Hooks through practical exercises.
+1. JavaScript Calculator — functions and switch/if-else.
+2. DOM To-Do List — HTML, CSS, and vanilla JavaScript.
+3. Registration Form Validation — HTML, CSS, and vanilla JavaScript.
+4. React Profile Card — reusable components and props.
+5. Controlled React Form — controlled inputs with `useState`.
+6. React Counter App — state updates with `useState`.

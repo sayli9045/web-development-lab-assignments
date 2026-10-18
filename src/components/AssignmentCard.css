@@ -1,0 +1,10 @@
+.assignment-card { display: flex; min-height: 225px; flex-direction: column; padding: 1.35rem; border: 1px solid #e2e6ef; border-radius: 14px; background: #fff; box-shadow: 0 8px 24px rgb(31 48 83 / 5%); transition: transform 160ms ease, box-shadow 160ms ease; }
+.assignment-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgb(31 48 83 / 10%); }
+.assignment-card__topline { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin-bottom: 1.15rem; }
+.assignment-card__number { color: #52617b; font-size: .78rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+.assignment-card__technology { padding: .28rem .55rem; border-radius: 999px; background: #edf3ff; color: #315ca8; font-size: .72rem; font-weight: 650; }
+.assignment-card h3 { margin: 0 0 .55rem; color: #18243b; font-size: 1.12rem; line-height: 1.35; }
+.assignment-card p { margin: 0 0 1.25rem; color: #5e6b80; font-size: .94rem; }
+.assignment-card__action { display: inline-flex; width: fit-content; align-items: center; gap: .45rem; margin-top: auto; padding: 0; border: 0; background: transparent; color: #2457aa; cursor: pointer; font: inherit; font-size: .9rem; font-weight: 700; }
+.assignment-card__action:hover { color: #173b78; text-decoration: underline; }
+.assignment-card__action:focus-visible { border-radius: 3px; outline: 3px solid #8db5ff; outline-offset: 4px; }
