@@ -5,7 +5,7 @@ import './App.css'
 const assignments = [
   { number: 1, title: 'JavaScript Calculator', description: 'Use functions and switch or if-else logic to perform basic arithmetic.', technology: 'HTML · CSS · JS', href: `${import.meta.env.BASE_URL}assignment-1-calculator/index.html` },
   { number: 2, title: 'DOM To-Do List', description: 'Create and manage tasks by working with the browser DOM.', technology: 'HTML · CSS · JS', href: `${import.meta.env.BASE_URL}assignment-2-todo-list/index.html` },
-  { number: 3, title: 'Registration Form Validation', description: 'Build a registration form and check user input with JavaScript.', technology: 'HTML · CSS · JS' },
+  { number: 3, title: 'Registration Form Validation', description: 'Build a registration form and check user input with JavaScript.', technology: 'HTML · CSS · JS', href: `${import.meta.env.BASE_URL}assignment-3-registration-form/index.html` },
   { number: 4, title: 'React Profile Card', description: 'Pass profile details into a reusable React component with props.', technology: 'React · Props' },
   { number: 5, title: 'Controlled React Form', description: 'Connect form fields to React state and respond to user input.', technology: 'React · useState' },
   { number: 6, title: 'React Counter App', description: 'Use React state to increment, decrement, and reset a counter.', technology: 'React · useState' },

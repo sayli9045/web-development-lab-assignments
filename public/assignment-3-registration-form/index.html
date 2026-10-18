@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Practice validating a registration form with vanilla JavaScript." />
+    <title>Registration Form Validation | Web Development Lab</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main class="registration-page">
+      <a class="back-link" href="../">← Back to all assignments</a>
+
+      <section class="registration-card" aria-labelledby="page-title">
+        <p class="eyebrow">ASSIGNMENT 03</p>
+        <h1 id="page-title">Registration Form Validation</h1>
+        <p class="intro">Fill in each field. This practice form checks your entries in your browser only.</p>
+
+        <form id="registration-form" novalidate>
+          <div class="field-group">
+            <label for="full-name">Full name</label>
+            <input id="full-name" name="fullName" type="text" autocomplete="name" aria-describedby="full-name-error" required />
+            <p class="field-error" id="full-name-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field-group">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" inputmode="email" aria-describedby="email-error" required />
+            <p class="field-error" id="email-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field-group">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="new-password" aria-describedby="password-help password-error" required />
+            <p class="field-help" id="password-help">At least 8 characters, with an uppercase letter, a lowercase letter, and a number.</p>
+            <p class="field-error" id="password-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field-group">
+            <label for="confirm-password">Confirm password</label>
+            <input id="confirm-password" name="confirmPassword" type="password" autocomplete="new-password" aria-describedby="confirm-password-error" required />
+            <p class="field-error" id="confirm-password-error" aria-live="polite"></p>
+          </div>
+
+          <button class="submit-button" type="submit">Validate registration</button>
+        </form>
+
+        <p id="success-message" class="success-message" role="status" aria-live="polite" aria-atomic="true" hidden>
+          Your form is valid. No information has been sent or saved.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
