@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A beginner-friendly DOM to-do list lab." />
+    <title>DOM To-Do List | Web Development Lab</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main class="todo-page">
+      <a class="back-link" href="../">← Back to all assignments</a>
+
+      <section class="todo-card" aria-labelledby="page-title">
+        <p class="eyebrow">ASSIGNMENT 02</p>
+        <h1 id="page-title">DOM To-Do List</h1>
+        <p class="intro">Write down a task, then check it off when it is done.</p>
+
+        <form id="task-form" novalidate>
+          <label for="task-input">Your task</label>
+          <div class="task-entry">
+            <input id="task-input" name="task" type="text" autocomplete="off" aria-describedby="task-error" />
+            <button class="add-button" type="submit">Add Task</button>
+          </div>
+          <p id="task-error" class="task-error" role="alert" aria-live="assertive"></p>
+        </form>
+
+        <div class="list-heading">
+          <h2>My tasks</h2>
+          <span id="task-count" class="task-count">0 tasks</span>
+        </div>
+        <p id="empty-state" class="empty-state" role="status">No tasks yet. Add your first task above.</p>
+        <ul id="task-list" class="task-list" aria-label="To-do tasks" aria-live="polite" aria-relevant="additions removals"></ul>
+      </section>
+    </main>
+  </body>
+</html>
