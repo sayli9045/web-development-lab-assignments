@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import AssignmentCard from './components/AssignmentCard.jsx'
+import ControlledForm from './components/ControlledForm.jsx'
 import ProfileCardDemo from './components/ProfileCardDemo.jsx'
 import './App.css'
 
@@ -8,7 +9,7 @@ const assignments = [
   { number: 2, title: 'DOM To-Do List', description: 'Create and manage tasks by working with the browser DOM.', technology: 'HTML · CSS · JS', href: `${import.meta.env.BASE_URL}assignment-2-todo-list/index.html` },
   { number: 3, title: 'Registration Form Validation', description: 'Build a registration form and check user input with JavaScript.', technology: 'HTML · CSS · JS', href: `${import.meta.env.BASE_URL}assignment-3-registration-form/index.html` },
   { number: 4, title: 'React Profile Card', description: 'Pass profile details into a reusable React component with props.', technology: 'React · Props', href: `${import.meta.env.BASE_URL}#assignment-4-profile-cards` },
-  { number: 5, title: 'Controlled React Form', description: 'Connect form fields to React state and respond to user input.', technology: 'React · useState' },
+  { number: 5, title: 'Controlled React Form', description: 'Connect form fields to React state and respond to user input.', technology: 'React · useState', href: `${import.meta.env.BASE_URL}#assignment-5-controlled-form` },
   { number: 6, title: 'React Counter App', description: 'Use React state to increment, decrement, and reset a counter.', technology: 'React · useState' },
 ]
 
@@ -27,6 +28,10 @@ function App() {
 
   if (currentHash === '#assignment-4-profile-cards') {
     return <ProfileCardDemo />
+  }
+
+  if (currentHash === '#assignment-5-controlled-form') {
+    return <ControlledForm />
   }
 
   return (
@@ -64,7 +69,11 @@ function App() {
               <AssignmentCard
                 key={assignment.number}
                 {...assignment}
-                onOpen={assignment.number === 4 ? () => setCurrentHash('#assignment-4-profile-cards') : undefined}
+                onOpen={assignment.number === 4
+                  ? () => setCurrentHash('#assignment-4-profile-cards')
+                  : assignment.number === 5
+                    ? () => setCurrentHash('#assignment-5-controlled-form')
+                    : undefined}
                 onComingSoon={(title) => setNotice(`${title} is coming soon.`)}
               />
             ))}
