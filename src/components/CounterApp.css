@@ -1,0 +1,32 @@
+.counter-page { width: min(100% - 3rem, 900px); min-height: 100vh; margin: 0 auto; padding: 3rem 0 4rem; }
+.counter-page__header { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; margin-bottom: 2rem; }
+.counter-page__eyebrow { margin: 0 0 .65rem; color: #315ca8; font-size: .74rem; font-weight: 800; letter-spacing: .14em; }
+.counter-page__header h1 { max-width: 660px; margin: 0; color: #18243b; font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -.05em; line-height: 1.1; }
+.counter-page__intro { max-width: 610px; margin: .8rem 0 0; color: #5e6b80; }
+.counter-page__intro code { padding: .1rem .35rem; border-radius: 4px; background: #e9eef7; color: #244f88; font-family: ui-monospace, Consolas, monospace; font-size: .9em; }
+.counter-page__back { flex: 0 0 auto; color: #2457aa; font-size: .9rem; font-weight: 700; text-decoration: none; }
+.counter-page__back:hover { text-decoration: underline; }
+.counter-page__back:focus-visible, .counter-button:focus-visible { border-radius: 5px; outline: 3px solid #8db5ff; outline-offset: 3px; }
+.counter-card { display: flex; max-width: 620px; flex-direction: column; align-items: center; padding: clamp(1.5rem, 6vw, 3rem); margin: 0 auto; border: 1px solid #e2e6ef; border-radius: 18px; background: #fff; box-shadow: 0 14px 40px rgb(31 48 83 / 8%); text-align: center; }
+.counter-card h2 { margin: 0; color: #52617b; font-size: .9rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+.counter-card__value { display: grid; min-width: 150px; min-height: 150px; place-items: center; padding: 1rem; margin: 1.1rem 0 .35rem; border: 1px solid #d9e4f5; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff, #edf3ff); color: #1b3e70; font-size: clamp(4rem, 15vw, 6rem); font-variant-numeric: tabular-nums; font-weight: 800; line-height: 1; }
+.counter-card__milestone { margin: .6rem 0 .3rem; color: #17613b; font-weight: 700; }
+.counter-card__controls { display: flex; justify-content: center; flex-wrap: wrap; gap: .7rem; margin-top: 1.5rem; }
+.counter-button { min-height: 46px; padding: .65rem 1rem; border: 1px solid transparent; border-radius: 8px; cursor: pointer; font: inherit; font-size: .9rem; font-weight: 750; transition: background-color 140ms ease, transform 140ms ease; }
+.counter-button:hover:not(:disabled) { transform: translateY(-1px); }
+.counter-button--primary { background: #244f88; color: #fff; }
+.counter-button--primary:hover:not(:disabled) { background: #183d70; }
+.counter-button--secondary { border-color: #cbd4e2; background: #fff; color: #35445e; }
+.counter-button--secondary:hover:not(:disabled) { background: #f3f6fb; }
+.counter-button--accent { background: #e9e2ff; color: #5135a0; }
+.counter-button--accent:hover:not(:disabled) { background: #dbd0ff; }
+.counter-button:disabled { cursor: not-allowed; opacity: .5; }
+
+@media (max-width: 640px) {
+  .counter-page { width: min(100% - 1.5rem, 500px); padding: 2rem 0 3rem; }
+  .counter-page__header { align-items: flex-start; flex-direction: column; gap: 1rem; }
+  .counter-card__value { min-width: 132px; min-height: 132px; }
+  .counter-card__controls { display: grid; width: 100%; grid-template-columns: 1fr 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) { .counter-button { transition: none; } }

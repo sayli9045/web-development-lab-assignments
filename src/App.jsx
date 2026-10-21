@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import AssignmentCard from './components/AssignmentCard.jsx'
 import ControlledForm from './components/ControlledForm.jsx'
+import CounterApp from './components/CounterApp.jsx'
 import ProfileCardDemo from './components/ProfileCardDemo.jsx'
 import './App.css'
 
@@ -10,7 +11,7 @@ const assignments = [
   { number: 3, title: 'Registration Form Validation', description: 'Build a registration form and check user input with JavaScript.', technology: 'HTML · CSS · JS', href: `${import.meta.env.BASE_URL}assignment-3-registration-form/index.html` },
   { number: 4, title: 'React Profile Card', description: 'Pass profile details into a reusable React component with props.', technology: 'React · Props', href: `${import.meta.env.BASE_URL}#assignment-4-profile-cards` },
   { number: 5, title: 'Controlled React Form', description: 'Connect form fields to React state and respond to user input.', technology: 'React · useState', href: `${import.meta.env.BASE_URL}#assignment-5-controlled-form` },
-  { number: 6, title: 'React Counter App', description: 'Use React state to increment, decrement, and reset a counter.', technology: 'React · useState' },
+  { number: 6, title: 'React Counter App', description: 'Use React state to increment, decrement, reset, or set a counter.', technology: 'React · useState', href: `${import.meta.env.BASE_URL}#assignment-6-counter` },
 ]
 
 function App() {
@@ -32,6 +33,10 @@ function App() {
 
   if (currentHash === '#assignment-5-controlled-form') {
     return <ControlledForm />
+  }
+
+  if (currentHash === '#assignment-6-counter') {
+    return <CounterApp />
   }
 
   return (
@@ -73,6 +78,8 @@ function App() {
                   ? () => setCurrentHash('#assignment-4-profile-cards')
                   : assignment.number === 5
                     ? () => setCurrentHash('#assignment-5-controlled-form')
+                    : assignment.number === 6
+                      ? () => setCurrentHash('#assignment-6-counter')
                     : undefined}
                 onComingSoon={(title) => setNotice(`${title} is coming soon.`)}
               />
